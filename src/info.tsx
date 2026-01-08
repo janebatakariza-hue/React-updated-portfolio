@@ -1,34 +1,29 @@
 import { Mail, Phone, MapPin, Instagram, Twitter, Linkedin, Github } from 'lucide-react';
 import ProfilePic from './see7.jpg';
+import './App.css'
 
 function InfoName() {
-  const StyleWay: React.CSSProperties = {
-    background: 'lightgrey',
-    color: 'black',
-    fontFamily: 'garamond',
-    padding: '15px',
-    border: '1px solid white',
-    borderRadius: '80px',
-    height: 'max-content',
-    width: 'max-content',
-    textAlign: 'center',
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginRight: '20px',
-  };
+
+
+
 
   return (
-    <div style={StyleWay}>
-      <nav style={{ width: '1500px', height: '50px', display: 'flex', gap: '100px' }}>
-        <a href="#about">ABOUT</a> |
+    <div className="container" >
+      <nav  >
+         <div className="pic">     
+          <img src={ProfilePic} alt="my picture" className='image' />
+          </div>
+ <div className="navBar">
+  <a href="#about">ABOUT</a> |
         <a href="#projects">PROJECTS</a> |
         <a href="#contacts">CONTACTS</a>
+      </div>
       </nav>
 
       <section id="about">
-        <h2>About me</h2>
+        <h2 >About me</h2>
         <address>
-          <img src={ProfilePic} alt="my picture" style={{ width: '100px' }} />
+          
           <p>
             Jane BATAKARIZA is a young patriotic lady whose vision aligns with
             technology and leadership, aspiring to be a full-stack software engineer.
@@ -36,36 +31,37 @@ function InfoName() {
         </address>
       </section>
 
-      <section id="projects">
-        <p>Projects worked on:</p>
+      <section id="projects" >
+        <h2>Projects worked on:</h2>
         <ul>
-          <li>
+          
             <a
               href="https://github.com/janebatakariza-hue/Faithfoundation"
               target="_blank"
               rel="noopener noreferrer"
+               
             >
-              Foundation project
+              Faith Foundation
             </a>
-          </li>
-          <li>
+          
+          <br/>
             <a
               href="https://github.com/janebatakariza-hue/coffee-shop"
               target="_blank"
               rel="noopener noreferrer"
-            >
+              >
               Coffee shop
             </a>
-          </li>
+          
         </ul>
       </section>
 
       <section id="contacts">
-        <h3>Contacts</h3>
+        <h2>Contacts</h2>
         <p>
           <Instagram />{' '}
           <a href="https://www.instagram.com/batakariza40/" target="_blank" rel="noopener noreferrer">
-            Instagram
+            batakariza40
           </a>
         </p>
 
@@ -77,21 +73,21 @@ function InfoName() {
         <h5><Phone /> +250727983026</h5>
       </section>
 
-      <h4 style={{ fontSize: '15px' }}>Skills</h4>
-      <button>React</button>
-      <button>MySQL</button>
-      <button>Node.js</button>
-      <button>C & C++</button>
-      <button>HTML & CSS</button>
+      <h2 >Skills</h2>
+      <button className="buttons" >React</button>
+      <button className="buttons" >MySQL</button>
+      <button className="buttons" >Node.js</button>
+      <button  className="buttons">C & C++</button>
+      <button className="buttons">HTML & CSS</button>
 
       <div>
-        <button style={{ background: 'lightgreen' }}>Available for work</button>
+        <button  className="buttonss">Available for work</button>
       </div>
 
       <footer>
-        <a href="https://twitter.com/yourhandle"><Twitter size={24} /></a>
-        <a href="https://linkedin.com/in/yourprofile"><Linkedin size={24} /></a>
-        <a href="https://github.com/janebatakariza-hue"><Github size={24} /></a>
+        <a href="https://twitter.com/yourhandle" style={{ margin:'10px'}}><Twitter size={24} /></a>
+        <a href="https://linkedin.com/in/yourprofile" style={{ margin:'10px'}}><Linkedin size={24} /></a>
+        <a href="https://github.com/janebatakariza-hue" style={{ margin:'10px'}}><Github size={24} /></a>
       </footer>
     </div>
   );
